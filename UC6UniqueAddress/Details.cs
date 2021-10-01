@@ -184,14 +184,14 @@ namespace UC6UniqueAddress
             int num = Convert.ToInt32(Console.ReadLine());
             for (int i = 1; i <= num; i++)
             {
-                while (i != num)
+                while (i <= num)
                 {
                     Console.WriteLine("Press 1 If you want to add a new Contact to the Address Book");
                     switch (Console.ReadLine())
                     {
                         case "1":
 
-                            for (int j = 0; j < people.Count; j++)
+                            for (int j = 0; j < num; j++)
                             {
                                 Console.Write("Enter the First Name: ");
                                 string fname = Console.ReadLine();
@@ -214,6 +214,7 @@ namespace UC6UniqueAddress
                             Console.WriteLine("The choice you made is not valid, please try again");
                             break;
                     }
+                    i--;
                     break;
                 }
 
